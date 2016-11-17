@@ -100,28 +100,28 @@ $borders = array('borders' => array('allborders' => array('style' => \PHPExcel_S
 $col = 0;
 
 // Set title
-$oPhpExcel->getActiveSheet()->setCellValue('A1', "Đại đẹp trai");
-$oPhpExcel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-$oPhpExcel->getActiveSheet()->getStyle('A1')->getFont()->setSize(16);
+//$oPhpExcel->getActiveSheet()->setCellValue('A1', "Đại đẹp trai");
+//$oPhpExcel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+//$oPhpExcel->getActiveSheet()->getStyle('A1')->getFont()->setSize(16);
 
 //merge cell data
 $arrHeader = $content['header'];
-$end = count($arrHeader);
-$end = chr(65 + $end - 1);
-$oPhpExcel->getActiveSheet()->mergeCells('A1:'.$end.'1');
-unset($end);
+//$end = count($arrHeader);
+//$end = chr(65 + $end - 1);
+//$oPhpExcel->getActiveSheet()->mergeCells('A1:'.$end.'1');
+//unset($end);
 
 //set header
 foreach ($arrHeader as $field)
 {
-    $oPhpExcel->getActiveSheet()->setCellValueByColumnAndRow($col, 4, $field);
-    $oPhpExcel->getActiveSheet()->getStyleByColumnAndRow($col, 4)->applyFromArray($styleArray);
+    $oPhpExcel->getActiveSheet()->setCellValueByColumnAndRow($col, 1, $field);
+    $oPhpExcel->getActiveSheet()->getStyleByColumnAndRow($col, 1)->applyFromArray($styleArray);
     $oPhpExcel->getActiveSheet()->getColumnDimensionByColumn($col)->setAutoSize(true);
-    $oPhpExcel->getActiveSheet()->getStyleByColumnAndRow($col, 4)->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('999999');
+    $oPhpExcel->getActiveSheet()->getStyleByColumnAndRow($col, 1)->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('999999');
     $col++;
 }
 
-$row = 5;
+$row = 2;
 foreach ($content['data'] as $i => $arrData)
 {
     //set start column
