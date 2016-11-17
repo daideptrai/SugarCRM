@@ -1,0 +1,5 @@
+- Copy file export_xls_utils.php và export_xls.php vao thu muc root
+- Copy thu vien PHPExcel theo path /custom/include/PHPExcel1.8.0/
+- Module nao can export excel thay cho export csv hien tai thi copy file entry_point_registry.php vao module do
+
+--- Xong ---
